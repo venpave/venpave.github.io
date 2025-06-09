@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Sobre la Muestra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="imagenes/logo ven pa ve barra de navegacion.png" alt="Logo Ven pa’ ve" /></a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="equipo.html">Equipo</a></li>
+      <li><a href="concepto.html">Concepto</a></li>
+    </ul>
+  </nav>
+</header>
+ 
+  <main class="sobre">
+  <section class="intro animate-on-scroll">
+    <h1>¿Qué es “Ven pa’ ve”?</h1>
+    <p>
+      “Ven pa’ ve” es una muestra hipermedial creada por estudiantes de la Fundación Universitaria Los Libertadores, donde convergen proyectos que exploran nuevas narrativas, formatos y experiencias interactivas. Inspirada en el concepto del <strong>manglar</strong>, esta muestra busca representar la diversidad, la mezcla de lenguajes y la vitalidad creativa que florece en entornos fértiles y abiertos al intercambio.
+    </p>
+  </section>
+
+  <section class="concepto animate-on-scroll">
+    <h2>El manglar como metáfora</h2>
+    <p>
+      Así como un manglar permite la convivencia de especies distintas, esta muestra es un espacio donde se entrecruzan proyectos que abordan temas sociales, culturales, personales y tecnológicos desde múltiples perspectivas. Cada obra es una raíz que se expande, conecta y transforma.
+    </p>
+  </section>
+
+  <section class="evento animate-on-scroll">
+    <h2>Sobre el evento</h2>
+    <p>
+      La muestra se lleva a cabo en la Fundación Universitaria Los Libertadores durante final de cada ciclo semestral, y puede visitarse tanto de manera presencial como virtual. Te invitamos a explorar las obras, conocer a los participantes y ser parte de esta experiencia viva.
+    </p>
+  </section>
+  <main class="sobre">
+
+  <section class="mision-vision-objetivo animate-on-scroll">
+    <h2>Misión</h2>
+    <p>
+      Fomentar el encuentro entre la comunidad académica y el público a través de una muestra de diseño hipermedia que visibiliza el trabajo creativo, experimental y colectivo de los estudiantes, promoviendo la articulación entre las industrias culturales y los procesos pedagógicos de la facultad.
+    </p>
+
+    <h2>Visión</h2>
+    <p>
+      Consolidarse como un espacio semestral de referencia dentro de la universidad y la ciudad, capaz de integrar innovación, cultura digital y participación activa, fortaleciendo los vínculos entre los futuros profesionales del diseño hipermedia y los diversos públicos que dialogan con sus propuestas.
+    </p>
+
+    <h2>Objetivo general</h2>
+    <p>
+      Diseñar, gestionar y ejecutar una muestra de diseño hipermedia que permita exhibir los proyectos, emprendimientos y piezas desarrolladas durante el semestre, articulando estrategias de difusión, interacción y colaboración para ampliar su impacto y fomentar el sentido de comunidad en el entorno universitario.
+    </p>
+  </section>
+
+    <a href="#top" class="btn-subir" title="Volver arriba">
+  <img src="imagenes/botonplanta.svg" alt="Ir arriba">
+</a>
+</main>
+</main>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll('.animate-on-scroll');
+
+    function checkVisibility() {
+      const triggerBottom = window.innerHeight * 0.9; // 90% de la altura de la ventana
+
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < triggerBottom) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    // También activar al cargar por si ya están visibles
+    checkVisibility();
+  });
+</script>
+  <footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Ven pa' Ve'. Todos los derechos reservados.</p>
+  </div>
+</footer>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+
+  // Cierra el menú al hacer clic en un enlace (opcional y útil en móviles)
+  document.querySelectorAll('.nav-links a').forEach(link =>
+    link.addEventListener('click', () => {
+      document.getElementById("navLinks").classList.remove("active");
+    })
+  );
+</script>
+</body>

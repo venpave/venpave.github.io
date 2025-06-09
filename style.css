@@ -1,0 +1,743 @@
+
+@font-face {
+  font-family: 'cubano'; /* ¡Reemplaza con el nombre que elijas! */
+  src: url('fuentes/Cubano.ttf') format('truetype'); /* ¡Reemplaza 'MiTituloFont.ttf' con el nombre de tu archivo! */
+  font-weight: normal; /* Ajusta si tu fuente tiene una variante bold o light */
+  font-style: normal;  /* Ajusta si tu fuente tiene una variante italic */
+  font-display: swap; /* Ayuda a que el texto se muestre más rápido mientras carga la fuente */
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background-color: #f4f4f4;
+  color: #333; 
+  background-image: url('imagenes/fondopag2.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: #384001;
+  padding: 20px 20px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.logo img {.logo img {
+  width: 150px; /* tamaño normal en escritorio */
+  transition: width 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 100px; /* tamaño reducido en móviles */
+  }
+}
+  height: 50px;
+}
+.hero {
+  background: url('imagenes/fondoprincipal.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3em;
+  color: #fff;
+  font-family: 'cubano', Arial, sans-serif; /* Aplica la nueva fuente aquí */
+  
+}
+.hero p {
+  font-size: 1.5em;
+  color: #f0f0f0;
+}
+.button-cartoon {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #ffa600;
+  border: 4px solid black;
+  border-radius: 12px;
+  font-family: 'cubano', Arial, sans-serif; /* <-- ¡CAMBIO AQUÍ! */
+  font-size: 1.3rem;
+  color: black;
+  
+  box-shadow: 4px 4px 0 black;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button-cartoon:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 black;
+}
+
+/* Aplicar la fuente a todos los títulos (h1, h2, h3, h4, h5, h6) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'cubano', Arial, sans-serif; /* Se aplica a todos los títulos */
+}
+/* --- DISEÑO RESPONSIVE --- */
+
+@media screen and (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+    padding: 0 20px;
+  }
+
+  .button-cartoon {
+    font-size: 1.1rem;
+    padding: 8px 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+    background-position: center top;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .button-cartoon {
+    font-size: 1rem;
+  }
+}
+/* --- SECCIÓN SOBRE LA MUESTRA --- */
+
+.sobre {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+.sobre h1, .sobre h2 {
+  color: #2f4f00; /* verde oscuro */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.sobre p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* Separación clara entre secciones */
+.sobre section {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d1d1b0;
+}
+
+/* Estilo específico para la sección misión, visión, objetivo */
+.mision-vision-objetivo {
+  background: #f3f6e7; /* verde muy claro */
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(47, 79, 0, 0.1);
+}
+
+.mision-vision-objetivo h2 {
+  color: #547c00; /* verde medio */
+  margin-top: 25px;
+}
+
+.mision-vision-objetivo p {
+  font-size: 1.05em;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 600px) {
+  .sobre h1 {
+    font-size: 1.8em;
+  }
+
+  .sobre h2 {
+    font-size: 1.4em;
+  }
+
+  .sobre p {
+    font-size: 1em;
+  }
+
+  .mision-vision-objetivo {
+    padding: 20px 15px;
+  }
+
+}
+
+/* Estado inicial oculto y desplazado hacia abajo */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado visible: animación completa */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+ } 
+.galeria-manglar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.galeria-manglar h1 {
+  font-size: 2.5rem;
+  color: #2f4f00;
+  margin-bottom: 10px;
+}
+
+.galeria-manglar .subtexto {
+  font-size: 1.1rem;
+  color: #2f4f00;
+  margin-bottom: 30px;
+}
+
+.grid-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.img-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.img-item img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox .cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  z-index: 1000;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.img-item {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.img-item:nth-child(1) { animation-delay: 0.1s; }
+.img-item:nth-child(2) { animation-delay: 0.2s; }
+.img-item:nth-child(3) { animation-delay: 0.3s; }
+.img-item:nth-child(4) { animation-delay: 0.4s; }
+.img-item:nth-child(5) { animation-delay: 0.5s; }
+.img-item:nth-child(6) { animation-delay: 0.6s; }
+.img-item:nth-child(7) { animation-delay: 0.7s; }
+.img-item:nth-child(8) { animation-delay: 0.8s; }
+.img-item:nth-child(9) { animation-delay: 0.9s; }
+.img-item:nth-child(10) { animation-delay: 0.10s; }
+.img-item:nth-child(11) { animation-delay: 0.11s; }
+.img-item:nth-child(12) { animation-delay: 0.12s; }
+.img-item:nth-child(13) { animation-delay: 0.13s; }
+.img-item:nth-child(14) { animation-delay: 0.14s; }
+
+/* Estilos base */
+main.concepto {
+  font-family: 'Montserrat', sans-serif;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
+  color: #1f1f1f;
+}
+
+/* Títulos */
+.titulo-concepto {
+  font-size: 1.8rem;
+  color:  #2f4f00; /* Azul cielo brillante tipo Frutiger Aero */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Animación base */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicación de la animación */
+.bloque-concepto {
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Añadir delay progresivo para que entren uno a uno */
+.bloque-concepto:nth-of-type(1) { animation-delay: 0.2s; }
+.bloque-concepto:nth-of-type(2) { animation-delay: 0.4s; }
+.bloque-concepto:nth-of-type(3) { animation-delay: 0.6s; }
+.bloque-concepto:nth-of-type(4) { animation-delay: 0.8s; }
+.bloque-concepto:nth-of-type(5) { animation-delay: 1s; }
+
+/* Equipo */
+main.equipo {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.titulo-equipo {
+  font-size: 2.5rem;
+  color: #2f4f00;
+  margin-bottom: 0.5rem;
+}
+
+.intro-equipo {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.grid-equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.integrante {
+  background: #f5f9ff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.integrante img {
+  width: 100%;
+  border-radius: 50%;
+  max-width: 150px;
+  margin: 0 auto 1rem;
+}
+
+.integrante h3 {
+  color: #2f4f00;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.integrante p {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.integrante a {
+  text-decoration: none;
+  color: #2f4f00;
+  font-weight: 600;
+}
+
+/* Hover */
+.integrante:hover {
+  transform: translateY(-5px);
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.mascota {
+  background: #ddffa9;
+  margin-top: 4rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+}
+
+.mascota-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.pedro-img {
+  max-width: 180px;
+  border-radius: 10%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.texto-mascota {
+  max-width: 420px;
+  text-align: left;
+}
+
+.texto-mascota h2 {
+  font-size: 1.6rem;
+  color: #2f4f00;
+  margin-bottom: 0.5rem;
+}
+
+.texto-mascota p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+.footer {
+  background-color: #1d2201; 
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'cubano'; 
+  src: url('fuentes/Cubano.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;  
+  font-display: swap;
+}
+
+.btn-subir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #343f00;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  display: inline-block;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.btn-subir img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.btn-subir:hover {
+  background-color: #495900;
+}
+.venpaves {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+  margin: 20px 0;
+  flex-wrap: wrap; 
+}
+.bloque-info {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bloque-info h2 {
+  color: #2c3902; /* Verde oscuro */
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Responsive: para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .venpaves {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloque-info {
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+
+  .button-cartoon {
+    width: 80%;
+    text-align: center;
+  }
+}
+.bloque-individual {
+  margin: 4rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.titulo-ven {
+   font-family: 'cubano'; 
+  src: url('fuentes/Cubano.ttf') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal;  
+  font-display: swap; 
+  font-size: 30pt;
+  color: #2c3902;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.contenido-ven {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .bloque-individual {
+    margin: 2rem 1rem;
+  }
+
+  .titulo-ven {
+    font-size: 1.5rem;
+  }
+
+  .contenido-ven {
+    padding: 1.5rem;
+  }
+}
+.fila-imagenes {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 20px; /* Espacio entre imágenes */
+  margin: 40px 0;
+}
+
+.fila-imagenes img {
+  width: 300px;  /* Ajusta este valor si necesitas otro tamaño */
+  height: auto;
+  border-radius: 10px; /* Opcional: esquinas redondeadas */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Opcional: sombra */
+}
+   .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2c3902;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  font-size: 28px;
+  color: white;
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #2c3902;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+}
+.fila-imagenes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fila-imagenes img {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* En móviles, las imágenes van en columna */
+@media (max-width: 768px) {
+  .fila-imagenes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fila-imagenes img {
+    width: 90%;
+  }
+}
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+  .hero {
+    background-position: top center;
+    background-size: cover;
+    height: auto;              /* Permite que crezca según el contenido */
+    padding: 3rem 1rem;        /* Espaciado interno para evitar que se vea cortado */
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('imagenes/fondoprincipal.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    
+    min-height: 100vh; /* Asegura que ocupe toda la altura */
+    height: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ven pa’ ve - Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body id="top">
+  
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="imagenes/logo ven pa ve barra de navegacion.png" alt="Logo Ven pa’ ve" /></a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="equipo.html">Equipo</a></li>
+      <li><a href="concepto.html">Concepto</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="hero">
+    <h1>Un manglar de ideas</h1>
+    <p>Una muestra hipermedial</p>
+    <a href="galeria.html" class="button-cartoon">Explorar manglar</a>
+    <a href="#top" class="btn-subir" title="Volver arriba">
+  <img src="imagenes/botonplanta.svg" alt="Ir arriba">
+</a>
+  </main>
+  <footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Ven pa' Ve'. Todos los derechos reservados.</p>
+  </div>
+</footer>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+
+  // Cierra el menú al hacer clic en un enlace (opcional y útil en móviles)
+  document.querySelectorAll('.nav-links a').forEach(link =>
+    link.addEventListener('click', () => {
+      document.getElementById("navLinks").classList.remove("active");
+    })
+  );
+</script>
+</body>
+</html>

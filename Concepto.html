@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Concepto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="imagenes/logo ven pa ve barra de navegacion.png" alt="Logo Ven pa’ ve" /></a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="equipo.html">Equipo</a></li>
+      <li><a href="concepto.html">Concepto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="concepto">
+  <section class="bloque-concepto">
+    <h2 class="titulo-concepto">01. Una muestra que crece como un manglar</h2>
+    <p>La tercera edición de “Ven pa’ ve’” se enraíza en una metáfora poderosa: el manglar. Este ecosistema, complejo y fértil, es el punto de partida conceptual para entender la muestra no solo como un evento de exposición, sino como un territorio vivo de creación, resistencia y conexión.</p>
+    <p>Así como los manglares sostienen la vida en condiciones desafiantes, nuestra muestra se construye desde la fuerza colectiva de lxs estudiantes, quienes con creatividad, persistencia y trabajo colaborativo, hacen florecer un espacio que celebra lo que somos capaces de crear cuando nos tejemos juntxs.</p>
+  </section>
+
+  <section class="bloque-concepto">
+    <h2 class="titulo-concepto">02. ¿Por qué un manglar?</h2>
+    <p>El manglar no es un paisaje cualquiera. Es un ecosistema donde conviven lo dulce y lo salado, donde las raíces crecen hacia los lados, y donde la vida se adapta para prosperar a pesar de las condiciones cambiantes.</p>
+    <p>En esta edición, tomamos al manglar como símbolo de lo híbrido, lo rizomático y lo resiliente. Porque nuestros procesos no siguen líneas rectas: brotan, se entrelazan, se desvían, se transforman. Nuestros proyectos tampoco nacen en soledad: se nutren del entorno, del diálogo, de la observación crítica y del trabajo colectivo.</p>
+    <p>El manglar es también un espacio de cuidado: un refugio que filtra, protege, amortigua. Queremos que esta muestra sea eso mismo: un espacio donde mostrar es compartir, donde presentar es abrazar, y donde diseñar es también resistir.</p>
+  </section>
+
+  <section class="bloque-concepto">
+    <h2 class="titulo-concepto">03. Lo que revela el manglar</h2>
+    <p>Durante todo el semestre, lxs estudiantes hemos trabajado desde la asignatura “Industrias culturales y creativas” para construir una muestra que no solo exhibe resultados, sino que narra los procesos: las dudas, los tropiezos, las adaptaciones, las decisiones creativas y estratégicas que hay detrás de cada proyecto.</p>
+    <p>Al igual que en los manglares, lo más interesante no siempre está en la superficie. Bajo lo visible hay tramas ocultas de colaboración, gestión, frustración, reaprendizaje y deseo. “Ven pa’ ve’” no es solo un escaparate de productos: es un relato colectivo que pone en valor lo que implica crear en contextos reales, con recursos limitados, pero con un potencial enorme.</p>
+  </section>
+
+  <section class="bloque-concepto">
+    <h2 class="titulo-concepto">04. Un evento que se enreda para sostenerse</h2>
+    <p>Organizar esta tercera edición no ha estado exento de retos. Falta de apoyo institucional, actividades aplazadas o canceladas, y la necesidad constante de reorganizarnos. Pero como las raíces de un manglar, nos entrelazamos para sostenernos.</p>
+    <p>Cada proyecto exhibido aquí es el resultado de múltiples conexiones: entre materias, entre personas, entre saberes, entre formatos. Esta muestra es prueba viva de que cuando nos organizamos desde la horizontalidad y el compromiso común, las ideas crecen más fuertes.</p>
+  </section>
+
+  <section class="bloque-concepto">
+    <h2 class="titulo-concepto">05. Esto es “Ven pa’ ve’”: un manglar que no deja de crecer</h2>
+    <p>Hoy, “Ven pa’ ve’” se consolida como un espacio clave dentro de la facultad, y esta tercera edición es testimonio de su madurez y expansión. Cada semestre, la muestra se transforma, crece, incorpora nuevas voces y perspectivas. Pero hay algo que se mantiene: el deseo de construir un espacio donde el diseño hipermedia se piense desde lo sensible, lo político y lo experimental.</p>
+    <p>El manglar, con su fuerza silenciosa, nos enseña que la diversidad es una fortaleza, que el caos puede ser fértil y que incluso en las aguas turbias puede florecer algo bello.</p>
+    <p>Aquí todo se conecta. Aquí todo tiene vida. Bienvenidxs a nuestro manglar. Bienvenidxs a “Ven pa’ ve’”.</p>
+  </section>
+
+    <a href="#top" class="btn-subir" title="Volver arriba">
+  <img src="imagenes/botonplanta.svg" alt="Ir arriba">
+</a>
+</main>
+  <footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Ven pa' Ve'. Todos los derechos reservados.</p>
+  </div>
+</footer>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+
+  // Cierra el menú al hacer clic en un enlace (opcional y útil en móviles)
+  document.querySelectorAll('.nav-links a').forEach(link =>
+    link.addEventListener('click', () => {
+      document.getElementById("navLinks").classList.remove("active");
+    })
+  );
+</script>
+</body>
+</html>
